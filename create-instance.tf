@@ -2,7 +2,7 @@
   name = "ipv4-address"
 }*/
 locals {
-  avengers = ["ironman", "captainamerica", "thor"]
+  avengers = ["ironman", "captainamerica"]
 }
 resource "google_compute_instance" "default" {
   for_each = toset(local.avengers)
