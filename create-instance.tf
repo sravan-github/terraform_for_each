@@ -57,7 +57,7 @@ metadata = {
 }
 
 output "avengers" {
-  value = null_resource.defaults
+  value = google_compute_instance.defaults
 }
 /*
 output "ip" {
