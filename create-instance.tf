@@ -48,7 +48,7 @@ metadata = {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = "admin-account@dolphine-project.iam.gserviceaccount.com"
+    email  = "adminacc@testproject-for-practice.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
     // Apply the firewall rule to allow external IPs to access this instance
@@ -56,7 +56,7 @@ metadata = {
 
 }
 
-/*
+
 output "ip" {
   value = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
-}*/
+}
