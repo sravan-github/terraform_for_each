@@ -1,9 +1,12 @@
 /*resource "google_compute_address" "static" {
   name = "ipv4-address"
 }*/
+locals {
+  avengers = ["ironman", "captainamerica", "thor"]
+}
 resource "google_compute_instance" "default" {
-  count = 2
-  name         = "virtual-machine-from-terraform-${count.index+1}"
+  for_each = toset(local.avengers)
+  name         = "each.value"
   machine_type = "f1-micro"
   zone         = "us-central1-a"
 
