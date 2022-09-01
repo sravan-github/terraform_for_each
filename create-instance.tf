@@ -58,6 +58,7 @@ metadata = {
 
 output "avengers" {
   value = google_compute_instance.default
+  sensitive = true
 }
 /*
 output "ip" {
